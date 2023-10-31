@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects from constructor</title>
+</head>
+<body>
+    
+    <script>
+        let date = new Date();
+        console.log(date);
+
+        // constructor
+        function MakeEmployee(name, surname, position) {
+            this.name = name;
+            this.surname = surname;
+            this.position = position;
+            this.printData = function() {
+                console.log(this.name, this.surname, this.position);
+            }
+        }
+
+        let emp001 = new MakeEmployee("John", "Doe", "PM");
+        emp001.printData();
+        console.log(emp001.name, emp001.surname, emp001.position);
+</script>
+</body>
+</html>
